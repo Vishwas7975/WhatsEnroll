@@ -1,7 +1,7 @@
 # WhatsEnroll 🎓💬
 
 > **WhatsApp-Based Automated Course Enrollment & Payment Platform**  
-> A production-tested, pluggable Laravel template that automates student course discovery, payments via Razorpay, credential delivery, and enrollment mapping—all powered through WhatsApp.
+> A production-tested, pluggable Laravel template that automates student course discovery, payments via Razorpay, credential delivery and enrollment mapping—all powered through WhatsApp.
 
 ---
 
@@ -12,14 +12,14 @@
 
 ## 📖 Overview
 
-**WhatsEnroll** is a reusable, general-purpose **WhatsApp course and service enrollment automation platform**. Instead of requiring learners to navigate complex checkout portals or manually coordinate bank transfer screenshots over chat, WhatsEnroll gives educational institutions, cohort-based course creators, and coaching academies a turnkey conversational sales and fulfillment engine:
+**WhatsEnroll** is a reusable, general-purpose **WhatsApp course and service enrollment automation platform**. Instead of requiring learners to navigate complex checkout portals or manually coordinate bank transfer screenshots over chat, WhatsEnroll gives educational institutions, cohort-based course creators and coaching academies a turnkey conversational sales and fulfillment engine:
 
-1. **Conversational Catalog & Onboarding:** Prospective students initiate contact via WhatsApp. The automated bot handles language selection (multilingual support built-in: English, Hindi, Telugu), displays available courses, and captures learner details.
+1. **Conversational Catalog & Onboarding:** Prospective students initiate contact via WhatsApp. The automated bot handles language selection (multilingual support built-in: English, Hindi, Telugu), displays available courses and captures learner details.
 2. **Instant Payment Link & Webhooks:** Generates dynamic Razorpay payment links and delivers them directly into the chat session.
 3. **Automated Verification & Receipt:** Automatically verifies Razorpay webhooks using HMAC-SHA256 signatures and handles manual UTR reconciliation when offline payments occur.
 4. **Pluggable Backend Provisioning:** Immediately provisions course access via a pluggable LMS/CRM adapter (`PortalService`), saving credentials to the database.
-5. **Multi-Channel Credential Delivery:** Dispatches login credentials, course dashboard links, and welcome confirmations instantly via WhatsApp and transactional email (Markdown-styled Blade templates).
-6. **Unified Admin Panel:** Built-in web dashboard for staff to manage courses, review pending payments, inspect audit logs, and broadcast WhatsApp messages.
+5. **Multi-Channel Credential Delivery:** Dispatches login credentials, course dashboard links and welcome confirmations instantly via WhatsApp and transactional email (Markdown-styled Blade templates).
+6. **Unified Admin Panel:** Built-in web dashboard for staff to manage courses, review pending payments, inspect audit logs and broadcast WhatsApp messages.
 
 Anyone cloning this repository can plug in their own WhatsApp Business account, Razorpay credentials, course catalog, and custom enrollment backend to adapt it to their exact use case.
 
@@ -29,9 +29,9 @@ Anyone cloning this repository can plug in their own WhatsApp Business account, 
 
 | Layer | Technology | Purpose |
 |---|---|---|
-| **Framework** | Laravel 11.x / 12.x (PHP 8.3+) | Modern backend framework, routing, queues, and security |
-| **Database** | MySQL 8.0+ / MariaDB 10.4+ | Relational schema with migrations, foreign keys, and indexes |
-| **Queue & Cache** | Redis + Laravel Horizon | Asynchronous background processing for WhatsApp messages, webhooks, and email dispatch |
+| **Framework** | Laravel 11.x / 12.x (PHP 8.3+) | Modern backend framework, routing, queues and security |
+| **Database** | MySQL 8.0+ / MariaDB 10.4+ | Relational schema with migrations, foreign keys and indexes |
+| **Queue & Cache** | Redis + Laravel Horizon | Asynchronous background processing for WhatsApp messages, webhooks and email dispatch |
 | **WhatsApp API** | Meta WhatsApp Business Cloud API | Direct cloud webhook handling and interactive button/list messages |
 | **Payment Gateway** | Razorpay (PHP SDK + Webhooks) | Secure automated payment links with webhook HMAC verification |
 | **Authentication & RBAC**| Laravel Breeze + Spatie Permission | Secure admin dashboard access with role-based permissions (`super-admin`, `admin`, `support`) |
@@ -228,7 +228,7 @@ Connecting a production phone number to Meta's WhatsApp Business Platform follow
 1. Go to [business.facebook.com](https://business.facebook.com) and log in with your primary business Facebook account.
 2. Create or select your **Business Portfolio**.
 3. Navigate to **Business Settings > Security Center** and initiate **Business Verification**.
-   - You will need official business documents (e.g. GST certificate, incorporation certificate, or utility bill with matching legal name and address).
+   - You will need official business documents (e.g. GST certificate, incorporation certificate or utility bill with matching legal name and address).
    - *Verification typically takes 1–3 business days.*
 
 ### Step 2: Create a Meta Developer App
