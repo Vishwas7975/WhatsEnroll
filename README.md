@@ -1,4 +1,4 @@
-# WhatsEnroll 🎓💬
+# WhatsEnroll 📲⚡
 
 > **WhatsApp-Based Automated Course Enrollment & Payment Platform**  
 > A production-tested, pluggable Laravel template that automates student course discovery, payments via Razorpay, credential delivery and enrollment mapping—all powered through WhatsApp.
